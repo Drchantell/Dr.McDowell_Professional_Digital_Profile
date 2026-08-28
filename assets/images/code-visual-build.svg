@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#281233"/>
+      <stop offset="60%" stop-color="#4B236B"/>
+      <stop offset="100%" stop-color="#1B1024"/>
+    </linearGradient>
+    <radialGradient id="glow1">
+      <stop offset="0%" stop-color="#E91E63" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#E91E63" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2">
+      <stop offset="0%" stop-color="#00B8B8" stop-opacity=".26"/>
+      <stop offset="100%" stop-color="#00B8B8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M 42 0 L 0 0 0 42" fill="none" stroke="#E91E63" stroke-opacity=".08"/>
+    </pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000" flood-opacity=".28"/></filter>
+    <style>
+      .title { font: 700 20px Arial, Helvetica, sans-serif; letter-spacing: 4px; fill: #FFD9EC; }
+      .code { font: 24px 'Courier New', monospace; fill: #F7EDF5; }
+      .quote { font: 700 42px Georgia, serif; fill: white; }
+      .small { font: 600 17px Arial, sans-serif; letter-spacing: 2px; fill: #D9B8D2; }
+    </style>
+  </defs>
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <rect width="1200" height="680" fill="url(#grid)"/>
+  <circle cx="1030" cy="120" r="280" fill="url(#glow1)"/>
+  <circle cx="160" cy="590" r="250" fill="url(#glow2)"/>
+
+  <rect x="42" y="42" width="1116" height="596" rx="32" fill="#120A17" fill-opacity=".70" stroke="#E91E63" stroke-opacity=".35" filter="url(#shadow)"/>
+  <circle cx="82" cy="82" r="7" fill="#B76E79"/>
+  <circle cx="108" cy="82" r="7" fill="#E91E63"/>
+  <circle cx="134" cy="82" r="7" fill="#00B8B8"/>
+  <text x="70" y="125" class="title">BUILD / 01</text>
+
+  <text x="70" y="175" class="code">const vision = &#x27;future-focused&#x27;;</text><text x="70" y="207" class="code">const leadership = &#x27;transformational&#x27;;</text><text x="70" y="239" class="code">const impact = vision + leadership;</text><text x="70" y="271" class="code">deploy(impact);</text>
+
+  <line x1="650" y1="150" x2="650" y2="520" stroke="#FFFFFF" stroke-opacity=".10"/>
+  <foreignObject x="700" y="165" width="390" height="290">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Georgia,serif;font-weight:700;font-size:42px;line-height:1.18;color:white;">
+      Build boldly. Lead intelligently. Design for impact.
+    </div>
+  </foreignObject>
+  <text x="700" y="535" class="small">TECHNOLOGY • LEADERSHIP • IMPACT</text>
+  <rect x="700" y="565" width="240" height="4" rx="2" fill="#E91E63"/>
+  <rect x="945" y="565" width="145" height="4" rx="2" fill="#00B8B8"/>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</svg>
